@@ -1,0 +1,11 @@
+.pagination-footer{
+    color: #0091ff;
+    text-align: center;    
+}
+.pagination-row{
+    border: 1;
+}
+
+.pagination-icon {
+    margin-bottom: -5px;
+}

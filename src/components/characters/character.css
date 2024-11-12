@@ -1,0 +1,26 @@
+.clickable-field{
+    cursor: pointer;
+}
+.star-war-table{
+    width: 30rem !important; 
+}
+.primary-color{
+    color: #0091ff;
+}
+
+.icon-margin {
+  margin-bottom: -5px;
+}
+.character-container {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+}
+
+.details-container{
+  margin-top: 4rem;
+}
+
+.custom-table td {
+  width: 33%;
+} 
