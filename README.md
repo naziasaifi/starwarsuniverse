@@ -37,6 +37,8 @@ React Router: For handling client-side routing.
 
 Axios: For making HTTP requests to the Star Wars API.
 
+Redux
+
 Material UI
 
 CSS Modules: For styling components.
