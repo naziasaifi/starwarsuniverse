@@ -30,8 +30,13 @@ Installation:
 7. Remove Favourite : Remove the characters from Favourite list.
 
 # Technologies Used
+
 React: A JavaScript library for building user interfaces.
-React Router: For handling client-side routing.1   
+
+React Router: For handling client-side routing. 
+
 Axios: For making HTTP requests to the Star Wars API.
-Material UI: For adding table.
+
+Material UI
+
 CSS Modules: For styling components.
