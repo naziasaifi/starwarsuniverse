@@ -28,4 +28,10 @@ Installation:
 5. Add to favourite: Add/Remove the characters from Favourite.
 6. Favourite List(Favourite): View list of favourite characters.
 7. Remove Favourite : Remove the characters from Favourite list.
-   
+
+# Technologies Used
+React: A JavaScript library for building user interfaces.
+React Router: For handling client-side routing.1   
+Axios: For making HTTP requests to the Star Wars API.
+Material UI: For adding table.
+CSS Modules: For styling components.
