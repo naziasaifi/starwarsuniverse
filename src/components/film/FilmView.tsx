@@ -13,7 +13,7 @@ const FilmView: React.FC<any> = ({url}) => {
         })
     },[])
     return (<ul>       
-        <li>{film?.title}</li>
+        <li key={film?.episode_id}>{film?.title}</li>
     </ul>)
 }
 export default FilmView;

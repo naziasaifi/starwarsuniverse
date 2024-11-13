@@ -40,7 +40,7 @@ export default function CustomDataTable(props: any) {
   let totalPages = 0;
   if (props.pageData) {
     rowPerPage = props.rowPerPage ? props.rowPerPage : 10;
-    totalPages = Math.floor(props.pageData.count / rowPerPage) + ((props.pageData.count % rowPerPage) == 0 ? 0 : 1);
+    totalPages = Math.floor(props.pageData.count / rowPerPage) + ((props.pageData.count % rowPerPage) === 0 ? 0 : 1);
   }
   const handleNext = (action: string) => {
     switch (action) {
@@ -65,14 +65,11 @@ export default function CustomDataTable(props: any) {
       <TableContainer component={Paper}>
         <Table className='custom-table' sx={{ minWidth: 700 }}>
           <TableHead>
-            <TableRow>
               {
                 props.columns.map((col: ColumnsData) => {
                   return <StyledTableCell>{col.header}</StyledTableCell>
                 })
               }
-
-            </TableRow>
           </TableHead>
           <TableBody>
             {props.data.map((row: any) => (

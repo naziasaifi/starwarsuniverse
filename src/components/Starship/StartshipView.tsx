@@ -1,10 +1,10 @@
-import { TableCell, TableRow } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useId, useState } from "react";
 import Starship from "../../model/Starship";
 import { startshipService } from "../../services/StarshipService";
 
 const StartshipView: React.FC<any> = ({url}) => {
     const [startship, setStarship] = useState<Starship>();
+    const id  = useId();
     useEffect(()=>{
         startshipService.getStarshipByUrl(url, (data:Starship, err:any)=>{
             if(data){
@@ -12,7 +12,9 @@ const StartshipView: React.FC<any> = ({url}) => {
             }
         })
     },[])
-    return (<ul><li>{startship?.name}</li></ul>)
+  
+     return (<ul><li key={`${id}--${startship?.name}`}>{startship?.name}</li></ul>)
+    
 }
 
 export default StartshipView;

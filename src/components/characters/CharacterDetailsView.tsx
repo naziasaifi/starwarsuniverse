@@ -15,7 +15,7 @@ import PlanetNameView from '../Planet/PlanetNameView';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import EditCharacterView from './EditCharacterView';
 import Loading from '../shared/Loading';
-import '../../App.css';
+import '../../style/App.css';
 
 const CharacterDetailsView= () => {
   const [character, setCharacter] = useState<Character | null |  undefined>(null);
@@ -82,36 +82,36 @@ const CharacterDetailsView= () => {
           <TableCell><ModeEditIcon onClick={()=>setEditOpen(!editOpen)} style={{cursor:'pointer'}}></ModeEditIcon></TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>Name</TableCell>
+          <TableCell className='table-cell'>Name</TableCell>
           <TableCell>{character.name}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>Hair Color</TableCell>
+          <TableCell className='table-cell'>Hair Color</TableCell>
           <TableCell>{character.hair_color}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>Eye Color</TableCell>
+          <TableCell className='table-cell'>Eye Color</TableCell>
           <TableCell>{character.eye_color}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>Gender</TableCell>
+          <TableCell className='table-cell'>Gender</TableCell>
           <TableCell>{character.gender}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>Home Planet</TableCell>
+          <TableCell className='table-cell'>Home Planet</TableCell>
           <TableCell><PlanetNameView url={character.homeworld}></PlanetNameView></TableCell>
         </TableRow>
         
       </Table>
       </div>
-      <div className='details-container'>
+      <div className='details-container w-25'>
       <Table className='star-war-table' sx={{
     [`& .${tableCellClasses.root}`]: {
       borderBottom: "none"
     }
   }}>
         <TableRow>
-          <TableCell colSpan={2}><Typography className='primary-color' variant="h6" gutterBottom>Films</Typography></TableCell>
+          <TableCell colSpan={2} className='table-cell'><Typography className='primary-color' variant="h6" gutterBottom >Films</Typography></TableCell>
         </TableRow>
         
         {character.films?character.films.map((film)=>{
@@ -128,7 +128,7 @@ const CharacterDetailsView= () => {
     }
   }}>
       <TableRow>
-          <TableCell colSpan={2}><Typography className='primary-color' variant="h6" gutterBottom>Starships Piloted</Typography></TableCell>
+          <TableCell colSpan={2} className='table-cell'><Typography className='primary-color' variant="h6" gutterBottom>Starships Piloted</Typography></TableCell>
         </TableRow>
         
         {character.films?character.starships.map((ss)=>{

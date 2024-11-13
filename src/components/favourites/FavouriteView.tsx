@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { favouriteService } from '../../services/FavouriteService';
 import { ColumnsData } from '../../model/DataTable';
 import CustomDataTable from '../shared/CustomDataTable';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PlanetNameView from '../Planet/PlanetNameView';
 import { Favourite } from '../../model/Favourite';
-import '../../App.css';
+import '../../style/App.css';
 
 const FavouriteView: React.FC = () => {
   const [favourites, setFavourites] = useState<Favourite[]>([]);

@@ -2,17 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Character from '../../model/Character';
 import { ColumnsData } from '../../model/DataTable';
 import { characterService } from '../../services/CharacterService';
-import CommonDataTable from '../shared/DataTable';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import RestResponse from '../../model/RestResponse';
 import CustomDataTable from '../shared/CustomDataTable';
-import { useDispatch } from 'react-redux';
 import { addAll } from '../../store/CharacterStore';
 import PlanetNameView from '../Planet/PlanetNameView';
 import { useAppDispatch } from '../../app/hooks';
 import './character.css';
 import Loading from '../shared/Loading';
-import '../../App.css';
+import '../../style/App.css';
 
 
 const CharacterListView: React.FC = () => {
@@ -59,7 +57,7 @@ const getColumns = () => {
   return (
     
     <div className='container'>
-      <h2>Character List</h2>
+      <h1>Character List</h1>
       <CustomDataTable handleNext={handleNext} columns = {getColumns()} data={characters?characters.results:[]} onRowClick={handleRowClick}
       pageData={{count: characters?.count, next:characters?.next, prev:characters?.previous}}
       filter={filterByName}></CustomDataTable>
